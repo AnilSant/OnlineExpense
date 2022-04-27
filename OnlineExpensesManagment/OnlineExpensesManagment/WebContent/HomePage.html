@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Online Expense Management(HOME PAGE)</title>
+<script type="text/javascript">
+function validate(){
+	var frm=document.getElementById("frm1");
+	var uname=frm.uname.value;
+	var password=frm.password.value;
+	if(uname==""){
+		alert("Please Enter Username");
+		return false;
+	}
+	else if(password==""){
+		alert("Please Enter Password");
+		return false;
+	}
+	return true;
+}
+
+</script>
+</head>
+<body background="sample.jpg">
+	<center>
+		<font face="roboto" size="18" style="color:darkblue;" style="text-align:center;">Expenses Management</font>
+	</center>
+	<br>
+	<center>
+	<form action="LoginServlet" method="get" onsubmit="return validate()" id="frm1">
+		<table>
+			<tr>
+			
+				<td style="color:darkred;" style="text-align:center;">User Name &nbsp;&nbsp;</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td style="color:darkred;" style="text-align:center;">Password&nbsp;&nbsp;</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			
+			<tr>
+				<td></td>
+				<td ><input type="submit" name="submit"  value="Submit"></td>
+			</tr>
+		</table>
+	</form>
+<h2 align="center" ><a href="UserRegistration.html" style="color:darkgreen;"> New User </a></h2>	
+</center>
+</body>
+</html>

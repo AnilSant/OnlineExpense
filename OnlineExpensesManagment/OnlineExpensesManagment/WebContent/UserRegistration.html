@@ -1,0 +1,68 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<title>New User Registration</title>
+<script type="text/javascript">
+function validate(){
+	var frm=document.getElementById("jj");
+	var uname=frm.uname.value;
+	var password=frm.password.value;
+	var type=frm.type.value;
+	var name=frm.name.value;
+	if(uname==""){
+		alert("Please Enter Username");
+		return false;
+	}
+	else if(password==""){
+		alert("Please Enter Password");
+		return false;
+	}
+		
+	else if(type==""){
+			alert("Please Enter you Role");
+			return false;
+	}
+	else if(name==""){
+		alert("Please Enter you Name");
+		return false;
+}
+	return true;
+}
+
+</script>
+</head>
+<body background="BackgroundImg.jpg">
+<center>
+		<font face="arial" size="18">Registration Page</font>
+</center>
+	<br>
+<center>
+<form action="UserRegistration" method="get" onsubmit="return validate()" id="jj">
+<table>
+			<tr>
+			
+				<td>UserName &nbsp;&nbsp;</td>
+				<td><input type="text" name="uname"></td>
+			</tr>
+			<tr>
+				<td>Password&nbsp;&nbsp;</td>
+				<td><input type="password" name="password"></td>
+			</tr>
+			<tr>
+				<td>type&nbsp;&nbsp;</td>
+				<td><input  name="type"></td>
+			</tr>
+			<tr>
+				<td>Name&nbsp;&nbsp;</td>
+				<td><input type="text" name="name"></td>
+			</tr>
+			<tr>
+				<td></td>
+				<td><input type="submit" name="submit"  value="Submit"></td>
+			</tr>
+		</table>
+</form>
+<h1 align="center" ><a href="HomePage.html" >Already User </a></h1>	
+</center>
+</body>
+</html>
